@@ -1,6 +1,9 @@
 <script>
   import c from 'classnames'
-  export let position
+  import { CARD_SYMBOLS } from 'src/constants'
+  import { curRoute, curUser } from 'src/store'
+
+  $: index = Math.floor(Math.random() * 4)
 </script>
 
 <style>
@@ -22,11 +25,18 @@
     transform: rotateX(180deg);
     text-shadow: var(--font-shadow-bottom-right);
   }
+  .red {
+    color: #993233;
+  }
 </style>
 
-<div class={c({
-  'top': position === 'top',
-  'bottom': position === 'bottom',
+<div class={c('top', {
+  'red': index % 2 !== 0
 })}>
-  ♤
+  {CARD_SYMBOLS[index]}
+</div>
+<div class={c('bottom', {
+  'red': index % 2 !== 0
+})}>
+  {CARD_SYMBOLS[index]}
 </div>

@@ -1,44 +1,58 @@
 export const members = [
   {
     'id': 'toma',
-    'name': 'toma_name',
+    'name': '1',
     'bg': require('public/toma-bg.png'),
     'gen': 'female'
   },
   {
     'id': 'yugai',
-    'name': 'yugai_name',
+    'name': '2',
     'bg': require('public/yugai-bg.png'),
     'gen': 'male'
   },
   {
+    'id': 'toma',
+    'name': '3',
+    'bg': require('public/toma-bg.png'),
+    'gen': 'female'
+  },
+  {
     'id': 'yugai',
-    'name': 'yugai_name',
+    'name': '4',
     'bg': require('public/yugai-bg.png'),
     'gen': 'male'
   },
   {
+    'id': 'toma',
+    'name': '5',
+    'bg': require('public/toma-bg.png'),
+    'gen': 'female'
+  },
+  {
     'id': 'yugai',
-    'name': 'yugai_name',
+    'name': '6',
     'bg': require('public/yugai-bg.png'),
     'gen': 'male'
   },
   {
-    'id': 'yugai',
-    'name': 'yugai_name',
-    'bg': require('public/yugai-bg.png'),
-    'gen': 'male'
+    'id': 'toma',
+    'name': '7',
+    'bg': require('public/toma-bg.png'),
+    'gen': 'female'
   },
   {
-    'id': 'yugai',
-    'name': 'yugai_name',
-    'bg': require('public/yugai-bg.png'),
-    'gen': 'male'
+    'id': 'toma',
+    'name': '8',
+    'bg': require('public/toma-bg.png'),
+    'gen': 'female'
   },
   {
-    'id': 'yugai',
-    'name': 'yugai_name',
-    'bg': require('public/yugai-bg.png'),
-    'gen': 'male'
-  }
+    'id': 'toma',
+    'name': '9',
+    'bg': require('public/toma-bg.png'),
+    'gen': 'female'
+  },
 ]
+
+export const CARD_SYMBOLS = ['♤', '♡', '♧', '♢']

@@ -3,6 +3,8 @@
   import { getMember } from 'src/utils'
 
   $: bg = ($curUser && getMember($curUser).bg) || null
+
+  const getScale = () => Math.random() > 0.5 ? 1 : -1
 </script>
 
 <style>
@@ -14,9 +16,12 @@
     right: 0;
     bottom: 0;
     opacity: .25;
-    background-size: cover;
     filter: blur(1px);
+    background-size: cover;
   }
 </style>
 
-<div style={`background-image: url(${bg});`} />
+<div style={`
+  background-image: url(${bg});
+  transform: scale(${getScale()}, ${getScale()});
+`} />

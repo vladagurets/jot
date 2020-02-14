@@ -1,39 +1,40 @@
 <script>
   import c from 'classnames'
-  export let position
+  import logoImage from 'public/logo.png'
 </script>
 
 <style>
-  div {
+  img {
     display: inline-flex;
     flex-direction: column;
-    cursor: pointer;
+    /* cursor: pointer; */
+    pointer-events: none;
     position: absolute;
     z-index: 1;
-  }
-  span {
-    font-size: 40px;
-    font-weight: bold;
+    background-size: contain;
+    width: 60px;
   }
   .top {
     top: 15px;
     left: 20px;
-    text-shadow: var(--font-shadow-bottom-right);
+    filter: drop-shadow(10px 10px 7px rgba(var(--font-color-set), .5));
   }
   .bottom {
     bottom: 15px;
     right: 20px;
     transform: rotateX(180deg);
-    text-shadow: var(--font-shadow-bottom-left);
+    filter: drop-shadow(-10px 10px 7px rgba(var(--font-color-set), .5));
   }
 </style>
 
-<div
-  class={c({
-    'top': position === 'top',
-    'bottom': position === 'bottom',
-  })}
->
-  <span>J1</span>
-  <span>T2</span>
-</div>
+<img
+  src={logoImage}
+  alt='JOT Logo'
+  class='bottom'
+/>
+<img
+  src={logoImage}
+  alt='JOT Logo'
+  class='top'
+/>
+

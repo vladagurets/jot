@@ -1,6 +1,6 @@
 <script>
   import Logo from 'src/components/Logo.svelte'
-  import Spade from 'src/components/Spade.svelte'
+  import CardSymbol from 'src/components/CardSymbol.svelte'
   import TopTitle from 'src/components/TopTitle.svelte'
   import BackgroundImages from 'src/components/BackgroundImages.svelte'
 
@@ -31,10 +31,8 @@
   </div>
 
   <!-- Absolute components -->
-  <Logo position=top />
-  <Spade position=top />
-  <Spade position=bottom />
-  <Logo position=bottom />
+  <Logo />
+  <CardSymbol />
   <BackgroundImages />
   <!--                     -->
 </main>
