@@ -3,9 +3,8 @@
   import CardSymbol from 'src/components/CardSymbol.svelte'
   import TopTitle from 'src/components/TopTitle.svelte'
   import BackgroundImages from 'src/components/BackgroundImages.svelte'
-
-	// import Link from 'src/components/Link.svelte'
 	import Route from 'src/components/Route.svelte'
+
   export let name
 </script>
 
@@ -24,7 +23,7 @@
 </style>
 
 <main>
-  <TopTitle />
+  <!-- <TopTitle /> -->
 
   <div>
     <Route />

@@ -3,22 +3,25 @@
   import Link from 'src/components/Link.svelte'
   import c from 'classnames'
   import { curUser } from 'src/store'
+  import cardBg from 'public/grid-pattern-sm.jpg'
 
   export let member
   export let index
   export let transition
   export let listWidth
 
-  let cardWidth = 200
+  let cardWidth = 180
 
   $: style = `
-    width: ${cardWidth}px;
     z-index: ${index};
     transform: rotateZ(${-10 + index * 2}deg);
     transition-delay: ${0.01 * index}s;
+    background-image: url(${cardBg});
+    width: ${cardWidth}px;
+    height: ${cardWidth * 1.4}px;
     ${
       transition
-        ? `left: ${index * 100}px;`
+        ? `left: ${index * 98}px;`
         : ''
     }
   `.uglify()
@@ -37,11 +40,9 @@
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, .5));
 
     overflow: hidden;
-    height: 280px;
-    width: 200px;
     position: absolute;
     left: 0px;
-    transition: all .4s cubic-bezier(0.63, 0.15, 0.03, 1.12);
+    transition: all .8s cubic-bezier(0.63, 0.15, 0.03, 1.12);
   }
   .transition {
     transform: rotateZ(0deg) !important;
@@ -71,7 +72,7 @@
 >
   <Link className="cardLink" page='/crew#{member.id}' {onClick}>
     <div class="flex">
-      <Translator key={member.name} />
+      <!-- <Translator key={member.name} /> -->
     </div>
   </Link>
 </div>
