@@ -42,16 +42,22 @@ export const members = [
     'gen': 'female'
   },
   {
-    'id': 'toma',
-    'name': '8',
-    'bg': require('public/toma-bg.png'),
-    'gen': 'female'
+    'id': 'yugai',
+    'name': '6',
+    'bg': require('public/yugai-bg.png'),
+    'gen': 'male'
   },
   {
     'id': 'toma',
     'name': '9',
     'bg': require('public/toma-bg.png'),
     'gen': 'female'
+  },
+  {
+    'id': 'yugai',
+    'name': '6',
+    'bg': require('public/yugai-bg.png'),
+    'gen': 'male'
   },
 ]
 

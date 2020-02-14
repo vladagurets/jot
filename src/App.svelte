@@ -1,11 +1,17 @@
 <script>
   import Logo from 'src/components/Logo.svelte'
   import CardSymbol from 'src/components/CardSymbol.svelte'
-  import TopTitle from 'src/components/TopTitle.svelte'
-  import BackgroundImages from 'src/components/BackgroundImages.svelte'
-	import Route from 'src/components/Route.svelte'
+  import BgImage from 'src/components/BgImage.svelte'
+  import Info from 'src/components/Info.svelte'
+  import Controlls from 'src/components/Controlls.svelte'
+  import { curUser } from 'src/store' 
 
-  export let name
+  $: getstyle = () => {
+    $curUser
+    return `
+      filter: invert(${Math.round(Math.random())});
+    `.uglify()
+  }
 </script>
 
 <style>
@@ -13,25 +19,21 @@
     width: 100%;
     height: 100%;
     position: relative;
+    background-color: var(--bg-color);
+    transition: filter .1s linear;
   }
-  div {
-    display: flex;
+  section {
     height: 100vh;
-    align-items: center;
-    justify-content: center;
+    width: 100vw;
   }
 </style>
 
-<main>
-  <!-- <TopTitle /> -->
-
-  <div>
-    <Route />
-  </div>
-
-  <!-- Absolute components -->
+<main style={getstyle()}>
   <Logo />
   <CardSymbol />
-  <BackgroundImages />
-  <!--                     -->
+  <BgImage />
+  <section>
+    <Controlls />
+    <Info />
+  </section>
 </main>
