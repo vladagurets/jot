@@ -69,9 +69,9 @@
 </style>
 
 <div>
-  <!-- <button class="left" on:click={prev} bind:this={prevButton}>
+  <button class="left" on:click={prev} bind:this={prevButton}>
     ◁
-  </button> -->
+  </button>
   <button class="right" on:click={next}  bind:this={nextButton}>
     ◁
   </button>
