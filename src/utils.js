@@ -2,8 +2,10 @@ import { members } from 'src/constants'
 
 export const getMembers = () => members
 
-export const getMember = id => getMembers().find(m => m.id === id)
+export const getMember = index => getMembers()[index]
 
-export const getInitRoute = () => window.location.pathname + (window.location.hash || "")
+export const getScreenWidth = () => window.screen.width
 
-export const getInitMemberId = () => getInitRoute().split('#')[1]
+export const getScreenHeight = () => window.screen.height
+
+export const rnd = n => Math.floor(Math.random() * n)

@@ -11,48 +11,6 @@ export const members = [
     'bg': require('public/yugai-bg.png'),
     'gen': 'male'
   },
-  {
-    'id': 'toma',
-    'name': '3',
-    'bg': require('public/toma-bg.png'),
-    'gen': 'female'
-  },
-  {
-    'id': 'yugai',
-    'name': '4',
-    'bg': require('public/yugai-bg.png'),
-    'gen': 'male'
-  },
-  {
-    'id': 'toma',
-    'name': '5',
-    'bg': require('public/toma-bg.png'),
-    'gen': 'female'
-  },
-  {
-    'id': 'yugai',
-    'name': '6',
-    'bg': require('public/yugai-bg.png'),
-    'gen': 'male'
-  },
-  {
-    'id': 'toma',
-    'name': '7',
-    'bg': require('public/toma-bg.png'),
-    'gen': 'female'
-  },
-  {
-    'id': 'toma',
-    'name': '8',
-    'bg': require('public/toma-bg.png'),
-    'gen': 'female'
-  },
-  {
-    'id': 'toma',
-    'name': '9',
-    'bg': require('public/toma-bg.png'),
-    'gen': 'female'
-  },
 ]
 
 export const CARD_SYMBOLS = ['♤', '♡', '♧', '♢']

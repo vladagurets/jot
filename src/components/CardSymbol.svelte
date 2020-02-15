@@ -1,7 +1,7 @@
 <script>
   import c from 'classnames'
   import { CARD_SYMBOLS } from 'src/constants'
-  import { curRoute, curUser } from 'src/store'
+  import { curUser } from 'src/store'
 
   $: index = Math.floor(Math.random() * 4)
 </script>

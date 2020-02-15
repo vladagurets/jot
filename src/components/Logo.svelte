@@ -7,7 +7,6 @@
   img {
     display: inline-flex;
     flex-direction: column;
-    /* cursor: pointer; */
     pointer-events: none;
     position: absolute;
     z-index: 1;
