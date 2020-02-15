@@ -1,6 +1,9 @@
 <script>
   import c from 'classnames'
   import logoImage from 'public/logo.png'
+  import { mobilecheck } from 'src/utils'
+
+  const isMobile = mobilecheck()
 </script>
 
 <style>
@@ -26,14 +29,18 @@
   }
 </style>
 
-<img
-  src={logoImage}
-  alt='JOT Logo'
-  class='bottom'
-/>
+
 <img
   src={logoImage}
   alt='JOT Logo'
   class='top'
 />
+
+{#if !isMobile}
+	<img
+    src={logoImage}
+    alt='JOT Logo'
+    class='bottom'
+  />
+{/if}
 

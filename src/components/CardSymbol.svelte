@@ -2,6 +2,8 @@
   import c from 'classnames'
   import { CARD_SYMBOLS } from 'src/constants'
   import { curUser } from 'src/store'
+  import { mobilecheck } from 'src/utils'
+  const isMobile = mobilecheck()
 
   $: index = Math.floor(Math.random() * 4) + ($curUser * 0)
 </script>
@@ -35,8 +37,11 @@
 })}>
   {CARD_SYMBOLS[index]}
 </div>
-<div class={c('bottom', {
+
+{#if !isMobile}
+	<div class={c('bottom', {
   'red': index % 2 !== 0
-})}>
-  {CARD_SYMBOLS[index]}
-</div>
+  })}>
+    {CARD_SYMBOLS[index]}
+  </div>
+{/if}
