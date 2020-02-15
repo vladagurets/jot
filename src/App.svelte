@@ -16,16 +16,12 @@
 
 <style>
   main {
-    width: 100%;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     position: relative;
     background-color: var(--bg-color);
     transition: filter .1s linear;
     overflow: hidden;
-  }
-  section {
-    height: 100vh;
-    width: 100vw;
   }
 </style>
 
