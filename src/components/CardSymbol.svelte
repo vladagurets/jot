@@ -3,7 +3,7 @@
   import { CARD_SYMBOLS } from 'src/constants'
   import { curUser } from 'src/store'
 
-  $: index = Math.floor(Math.random() * 4)
+  $: index = Math.floor(Math.random() * 4) + ($curUser * 0)
 </script>
 
 <style>
