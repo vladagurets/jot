@@ -34,7 +34,6 @@
 
   .left {
     filter: drop-shadow(3px 0 5px rgba(var(--font-color-set), .9));
-    /* filter: drop-shadow(10px 10px 7px rgba(var(--font-color-set), .5)); */
   }
 
   .right {

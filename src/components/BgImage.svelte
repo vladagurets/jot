@@ -1,10 +1,17 @@
 <script>
   import { curUser } from 'src/store' 
-  import { getMember } from 'src/utils'
+  import { getMember, getScreenWidth, getScreenHeight, rnd } from 'src/utils'
 
-  $: bg = getMember($curUser).bg
+  const bgSize  = 4000
+  const getXBgPosition = () => rnd(bgSize - getScreenWidth())
+  const getYBgPosition = () => rnd(bgSize - getScreenHeight())
 
-  const getScale = () => Math.random() > 0.5 ? 1 : -1
+  $: style = `
+    width: ${bgSize}px;
+    height: ${bgSize}px;
+    background-image: url(${getMember($curUser).bg});
+    background-position: -${getXBgPosition()}px -${getYBgPosition()}px;
+  `
 </script>
 
 <style>
@@ -15,14 +22,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: .25;
-    filter: blur(1px);
-    background-size: cover;
-    background-repeat: repeat;
+    opacity: .5;
+    /* filter: blur(1px); */
   }
 </style>
 
-<div style={`
-  background-image: url(${bg});
-  transform: scale(${getScale()}, ${getScale()});
-`} />
+<div style={style} />

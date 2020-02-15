@@ -21,6 +21,7 @@
     position: relative;
     background-color: var(--bg-color);
     transition: filter .1s linear;
+    overflow: hidden;
   }
   section {
     height: 100vh;
