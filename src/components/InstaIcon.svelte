@@ -4,7 +4,7 @@
 
   const getLink = () => {
     if (isIOS()) {
-      return 'nstagram://user?username=justonetattoostudio'
+      return 'instagram://user?username=justonetattoostudio'
     } else if (isAndroid()) {
       return 'intent://instagram.com/_u/justonetattoostudio/#Intent;package=com.instagram.android;scheme=https;end'
     } else {
