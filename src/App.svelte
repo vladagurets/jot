@@ -2,9 +2,9 @@
   import Logo from 'src/components/Logo.svelte'
   import CardSymbol from 'src/components/CardSymbol.svelte'
   import BgImage from 'src/components/BgImage.svelte'
-  import Info from 'src/components/Info.svelte'
+  import InstaIcon from 'src/components/InstaIcon.svelte'
   import Controlls from 'src/components/Controlls.svelte'
-  import { curUser } from 'src/store' 
+  import { curUser } from 'src/store'
 
   $: getstyle = () => {
     $curUser
@@ -28,9 +28,7 @@
 <main style={getstyle()}>
   <Logo />
   <CardSymbol />
+  <InstaIcon />
   <BgImage />
-  <section>
-    <Controlls />
-    <Info />
-  </section>
+  <Controlls />
 </main>

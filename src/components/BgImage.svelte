@@ -1,16 +1,17 @@
 <script>
   import { curUser } from 'src/store' 
-  import { getMember, getScreenWidth, getScreenHeight, rnd } from 'src/utils'
+  import { getMembers, getMember, getScreenWidth, getScreenHeight, rnd } from 'src/utils'
 
   const bgSize  = 4000
   const getXBgPosition = () => rnd(bgSize - getScreenWidth())
   const getYBgPosition = () => rnd(bgSize - getScreenHeight())
 
-  $: style = `
+  $: getStyle = index => `
     width: ${bgSize}px;
     height: ${bgSize}px;
-    background-image: url(${getMember($curUser).bg});
+    background-image: url(${getMember(index).bg});
     background-position: -${getXBgPosition()}px -${getYBgPosition()}px;
+    visibility: ${index === $curUser ? 'visible' : 'hidden' }
   `
 </script>
 
@@ -27,4 +28,6 @@
   }
 </style>
 
-<div style={style} />
+{#each getMembers() as { bg }, i}
+  <div style={getStyle(i)} />
+{/each}
