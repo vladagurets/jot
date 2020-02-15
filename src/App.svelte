@@ -18,6 +18,8 @@
   main {
     height: 100vh;
     width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
     position: relative;
     background-color: var(--bg-color);
     transition: filter .1s linear;
