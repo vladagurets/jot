@@ -16,11 +16,10 @@
 
 <style>
   main {
-    height: 100vh;
+    viewport-fit: cover;
+    position: fixed;
+    height: calc(100vh - env(safe-area-inset-top));
     width: 100vw;
-    max-height: 100vh;
-    max-width: 100vw;
-    position: relative;
     background-color: var(--bg-color);
     transition: filter .1s linear;
     overflow: hidden;
