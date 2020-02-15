@@ -14,15 +14,15 @@
     position: absolute;
     z-index: 1;
     background-size: contain;
-    width: 60px;
+    width: 3em;
   }
   .top {
-    top: 15px;
+    top: 20px;
     left: 20px;
     filter: drop-shadow(10px 10px 7px rgba(var(--font-color-set), .5));
   }
   .bottom {
-    bottom: 15px;
+    bottom: 20px;
     right: 20px;
     transform: rotateX(180deg);
     filter: drop-shadow(-10px 10px 7px rgba(var(--font-color-set), .5));

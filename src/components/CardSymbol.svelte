@@ -12,7 +12,7 @@
   div {
     position: absolute;
     z-index: 1;
-    font-size: 60px;
+    font-size: 3em;
     pointer-events: none;
   }
 

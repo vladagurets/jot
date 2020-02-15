@@ -23,11 +23,11 @@
     z-index: 1;
   }
   a {
-    cursor: pointer !important;
+    cursor: pointer;
   }
   img {
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
   }
 </style>
 
